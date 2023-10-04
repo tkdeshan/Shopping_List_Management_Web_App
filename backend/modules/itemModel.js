@@ -10,7 +10,7 @@ const itemSchema = new mongoose.Schema({
         required:true
     },
     quentity:{
-        type:Number,
+        type:String,
         required:true
     }
 });

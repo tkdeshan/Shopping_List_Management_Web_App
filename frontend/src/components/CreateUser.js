@@ -11,7 +11,10 @@ function CreateUser() {
   const Submit = (e) => {
     e.preventDefault();
     axios
-      .post('https://shopping-list-management-web-app-backend.vercel.app/api/item', { itemId, itemName, quentity })
+      .post(
+        'https://shopping-list-management-web-app-backend.vercel.app/api/item',
+        { itemId, itemName, quentity }
+      )
       .then((result) => {
         console.log(result);
         navigate('/');
@@ -28,7 +31,6 @@ function CreateUser() {
             <label>Item Number</label>
             <input
               type="text"
-              placeholder="1"
               className="form-control"
               onChange={(e) => setItemId(e.target.value)}
             />
@@ -37,7 +39,6 @@ function CreateUser() {
             <label>Item Name</label>
             <input
               type="text"
-              placeholder="Soap"
               className="form-control"
               onChange={(e) => setItemName(e.target.value)}
             />
@@ -46,7 +47,6 @@ function CreateUser() {
             <label>Quentity</label>
             <input
               type="text"
-              placeholder="10"
               className="form-control"
               onChange={(e) => setQuentity(e.target.value)}
             />
