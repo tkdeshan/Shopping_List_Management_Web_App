@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 function Users() {
-
   const [items, setItems] = useState([]);
 
   useEffect(() => {
@@ -37,7 +36,9 @@ function Users() {
                 <td>{item.itemName}</td>
                 <td>{item.quentity}</td>
                 <td>
-                  <button>Update</button>
+                  <Link to={`/update/${item._id}`} className="btn btn-success">
+                    Update
+                  </Link>
                   <button>Delete</button>
                 </td>
               </tr>
