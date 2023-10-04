@@ -16,4 +16,11 @@ router.get('/items/:id', (req, res) => {
     .catch((err) => res.json(err));
 });
 
+// Insert data
+router.post('/item', (req, res) => {
+  Items.create(req.body)
+    .then((items) => res.json(items))
+    .catch((err) => res.json(err));
+});
+
 module.exports = router;
