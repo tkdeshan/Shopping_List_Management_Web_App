@@ -23,4 +23,19 @@ router.post('/item', (req, res) => {
     .catch((err) => res.json(err));
 });
 
+// Update data
+router.put('/item/:id', (req, res) => {
+  const id = req.params.id;
+  Items.findByIdAndUpdate(
+    { _id: id },
+    {
+      itemId: req.body.itemId,
+      itemName: req.body.itemName,
+      quentity: req.body.quentity,
+    }
+  )
+    .then((items) => res.json(items))
+    .catch((err) => res.json(err));
+});
+
 module.exports = router;
