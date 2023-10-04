@@ -38,4 +38,12 @@ router.put('/item/:id', (req, res) => {
     .catch((err) => res.json(err));
 });
 
+// Delete data
+router.delete('/item/:id', (req, res) => {
+  const id = req.params.id;
+  Items.findByIdAndDelete({ _id: id })
+    .then((res) => res.json(res))
+    .catch((err) => res.json(err));
+});
+
 module.exports = router;
