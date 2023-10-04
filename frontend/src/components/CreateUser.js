@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 function CreateUser() {
+  const BaseURL = 'https://shopping-list-management-web-app-backend.vercel.app';
   const [itemId, setItemId] = useState();
   const [itemName, setItemName] = useState();
   const [quentity, setQuentity] = useState();
@@ -11,10 +12,7 @@ function CreateUser() {
   const Submit = (e) => {
     e.preventDefault();
     axios
-      .post(
-        'https://shopping-list-management-web-app-backend.vercel.app/api/item',
-        { itemId, itemName, quentity }
-      )
+      .post(`${BaseURL}/api/item`, { itemId, itemName, quentity })
       .then((result) => {
         console.log(result);
         navigate('/');

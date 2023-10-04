@@ -2,24 +2,21 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
+
 function Users() {
+  const BaseURL = 'https://shopping-list-management-web-app-backend.vercel.app';
   const [items, setItems] = useState([]);
 
   useEffect(() => {
     axios
-      .get(
-        'https://shopping-list-management-web-app-backend.vercel.app/api/items'
-      )
+      .get(`${BaseURL}/api/items/`)
       .then((result) => setItems(result.data))
       .catch((err) => console.log(err));
   }, []);
 
   const handleDelete = (id) => {
     axios
-      .delete(
-        'https://shopping-list-management-web-app-backend.vercel.app/api/item/' +
-          id
-      )
+      .delete(`${BaseURL}/api/item/${id}`)
       .then((res) => {
         console.log(res);
         window.location.reload();

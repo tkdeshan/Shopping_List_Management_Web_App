@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 function UpdateUser() {
+  const BaseURL = 'https://shopping-list-management-web-app-backend.vercel.app';
   const { id } = useParams();
   const [itemId, setItemId] = useState();
   const [itemName, setItemName] = useState();
@@ -11,10 +12,7 @@ function UpdateUser() {
 
   useEffect(() => {
     axios
-      .get(
-        'https://shopping-list-management-web-app-backend.vercel.app/api/items/' +
-          id
-      )
+      .get(`${BaseURL}/api/items/${id}`)
       .then((result) => {
         console.log(result);
         setItemId(result.data.itemId);
@@ -27,11 +25,7 @@ function UpdateUser() {
   const Update = (e) => {
     e.preventDefault();
     axios
-      .put(
-        'https://shopping-list-management-web-app-backend.vercel.app/api/item/' +
-          id,
-        { itemId, itemName, quentity }
-      )
+      .put(`${BaseURL}/api/item/${id}`, { itemId, itemName, quentity })
       .then((result) => {
         console.log(result);
         navigate('/');
