@@ -75,4 +75,4 @@ The web app is live on : https://shopping-list-management-web-app-frontend.verce
 
 Shopping list web app consists of two parts: the frontend and the backend. They communicate through API requests. (Make sure to replace BaseURL with your localhost URL).
 
-You can add, update, and delete shopping list items using the provided API endpoints. Customize and expand the functionality as needed for your application.
+You can add, update, and delete shopping items using the provided API endpoints. Customize and expand the functionality as needed for your application.
