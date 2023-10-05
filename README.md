@@ -24,43 +24,43 @@ The web app is live on : https://shopping-list-management-web-app-frontend.verce
 1. Clone the project :
    
     ```bash
-   `git clone https://github.com/tkdeshan/Shopping_List_Management_Web_App/`
+   git clone https://github.com/tkdeshan/Shopping_List_Management_Web_App/
     
 3. Navigate to the project directory:
 
     ```bash
-   `cd Shopping_List_Management_Web_App`
+   cd Shopping_List_Management_Web_App
 
 ### Frontend
 
 1. Navigate to the frontend directory:
 
    ```bash
-   `cd frontend`
+   cd frontend
 
 2. Install the required dependencies:
 
    ```bash
-   `npm install`
+   npm install
 
 3. Start the React development server:
 
     ```bash
-   `npm start`
+   npm start
 
-4. Now, the app is running on my hosted server. Replace `http://localhost:5000` in the BaseURL variable in the component files to connect the frontend to your hosted server.
+4. Now, the app is running by getting data on my hosted server. Replace `http://localhost:5000` in the BaseURL variable in the component files to connect the frontend to your local server.
 
 ### Backend
 
 1. Navigate to the backend directory:
 
    ```bash
-   `cd backend`
+   cd backend
 
 2. Install the required dependencies:
 
    ```bash
-   `npm install`
+   npm install
    
 3. Copy .env file as example.env file.
 
@@ -69,7 +69,7 @@ The web app is live on : https://shopping-list-management-web-app-frontend.verce
 3. Start the backend server:
 
     ```bash
-   `npm start`
+   npm start
 
 ## Usage
 
